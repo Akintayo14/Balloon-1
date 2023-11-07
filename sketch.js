@@ -8,8 +8,7 @@ function preload(){
   bowImage = loadImage("bow0.png");
   red_balloonImage = loadImage("red_balloon0.png");
   blue_balloonImage = loadImage("blue_balloon0.png")
-  pink_balloonImage = loadImage("pink_balloon0.png")
-  green_balloonImage = loadImage("green_balloon0.png")
+  
 }
 
 
@@ -46,7 +45,7 @@ function draw() {
     createArrow();
     
   }
-}
+  
   //creating continous balloons
   var select_balloon = Math.round(random(1,1));
   
@@ -54,11 +53,13 @@ function draw() {
     if (select_balloon == 1) {
       redBalloon();
     } else if (select_balloon == 2){
-      blueBalloon();  
-    } else if (select_balloon ==3){
-      pinkBalloon
+      blueBalloon();
+    } else if (select_balloon == 3){
+      greenBalloon();
+    }else if (select_balloon == 4){
+      pinkBalloon();
     }
-   
+  }
   
   drawSprites();
 }
@@ -86,25 +87,18 @@ function redBalloon() {
 }
 
 function blueBalloon() {
-  var blue = createSprite(0,Math.round(random(10,350)), 5, 5);
-  blue.addImage(blue_balloonImage);
-  blue.velocityX = 3
-  blue.lifetime = 150
-  blue.scale = 0.1
+ var blue = createSprite(0,Math.round(random(30,350)),20,20);
+ blue.addImage(blue_balloonImage);
+ blue.velocityX = 3;
+ blue.lifetime = 150;
+ blue.scale = 0.1;
 }
 
 function greenBalloon() {
-  var green = createSprite(0,Math.round(random(10,350)),5,5)
-  green.addImage(green_balloonImage);
-  green.velocityX = 3
-  green.lifetime = 150
-  green.scale = 0.1
+var green = createSprite(0,Math.round(random(30,350)),20,20);
+green.addI
 }
 
 function pinkBalloon() {
-  var pink = createSprite(0,Math.round(random(10,350)),5,5)
-  pink.addImage(pink_balloonImage)
-  pink.velocityX = 3
-  pink.lifetime = 150
-  pink.scale = 0.1
+  //write code for spwaning pink balloons
 }
